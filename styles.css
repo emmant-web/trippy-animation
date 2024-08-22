@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+/*!
+ * animate.css - http://daneden.me/animate
+ * Version - 3.5.1
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2016 Daniel Eden
+ */
+
+body {
+    overflow: hidden;
+    background: linear-gradient(45deg, #ee9ca7, #ffdde1, #ee9ca7, #ffdde1);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite, backgroundFlash 3s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes backgroundFlash {
+    0% {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.shape1 {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 0, 0, 0.5);
+    animation: move 10s infinite;
+}
+
+.shape2 {
+    width: 150px;
+    height: 150px;
+    background: rgba(0, 255, 0, 0.5);
+    animation: move 12s infinite;
+}
+
+.shape3 {
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 0, 255, 0.5);
+    animation: move 15s infinite;
+}
+
+.shape4 {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 0, 0.5);
+    animation: move 8s infinite;
+}
+
+.shape5 {
+    width: 180px;
+    height: 180px;
+    background: rgba(255, 0, 255, 0.5);
+    animation: move 14s infinite;
+}
+
+.shape6 {
+    width: 130px;
+    height: 130px;
+    background: rgba(0, 255, 255, 0.5);
+    animation: move 11s infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(50vw, -30vh) rotate(180deg);
+    }
+    50% {
+        transform: translate(-50vw, 50vh) rotate(360deg);
+    }
+    75% {
+        transform: translate(40vw, -50vh) rotate(540deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(720deg);
+    }
+}
